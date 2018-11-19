@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'dream_users',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +52,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'dream.urls'
+AUTH_USER_MODEL = 'dream_users.User'
 
 TEMPLATES = [
     {
@@ -75,7 +78,7 @@ WSGI_APPLICATION = 'dream.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ml_db',
+        'NAME': 'db_ml',
         'USER': 'root',
         'PASSWORD': 'tuan0210',
         'HOST': 'localhost',
@@ -118,3 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+EXPIRED_TOKEN_TIME = 86400
+URL_GET_ID_FACEBOOK = "https://graph.facebook.com/me?access_token="
+EMAIL_NO_REPLY = 'noreply@gmail.com'
+SERVER_URL = 'http://128.199.159.39:8000'
