@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'channels',
     'dream_users',
 ]
 
@@ -53,6 +54,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'dream.urls'
 AUTH_USER_MODEL = 'dream_users.User'
+ASGI_APPLICATION = "chat.routing.application"
 
 TEMPLATES = [
     {
